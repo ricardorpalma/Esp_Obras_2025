@@ -1,2 +1,11 @@
 # Esp_Obras_2023
-Entregas Finarles EO
+Entregas Finales EO
+
+
+## Grupo 1
+
+* Viginia Roldan
+* Eva Mino
+* Flor Paez
+
+  
