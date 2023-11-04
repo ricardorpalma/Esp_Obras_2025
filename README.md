@@ -5,17 +5,17 @@ Entregas Finales EO
 ## Grupo 1
 
 * Viginia Roldan
-* Eva Mino
+* Eva Mino  - <evamino26@gmail.com> **Aprobado**
 * Flor Paez
 
  ## Grupo 2
- Diego Caceres
+ Diego Caceres <dacaceres@hotmail.es> **Aprobado>**
  Sergio Zalazar
  
  ## Grupo 3
- Facundo Mole
- Octavio Moyano
+ Facundo Mole <facundomole@hotmail.com> **Aprobado**
+ Octavio Moyano <octaviomoyano36@gmail.com> **Aprobado**
  
  ## Grupo 4
- Tomas PEdro
+ Tomas Pedro <tomaspedro38@gmail.com> **Aprobado** 
  Sebastian VArgas
