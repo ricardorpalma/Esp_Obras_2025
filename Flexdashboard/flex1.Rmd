@@ -1,0 +1,272 @@
+---
+title: "SEVEL"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+# Control General
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+plot(sort(cars$speed))
+```
+
+Ver ejemplos en <https://rstudio.github.io/flexdashboard/articles/using.html>
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+plot(cars)
+abline(h=15, col="red")
+abline(v=20, col="green")
+```
+
+### Chart C
+
+```{r}
+boxplot(cars)
+```
+
+
+# Compras
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart D
+
+```{r}
+data <- data.frame(grupo = LETTERS[1:6],    # Create example data
+                   valor = 9:4)
+data   
+```
+
+### Chart E
+
+```{r}
+barplot(data$valor ~ data$grupo, col="red")    
+```
+
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+### Chart F
+
+```{r}
+barplot(data$valor ~ data$grupo,            # Horizontal barplot in Base R
+        horiz = TRUE, col="blue")
+```
+
+
+# Logistica
+
+Column {data-width=350}
+-------------------------------------
+    
+### Alamcen
+    
+```{r}
+Prop <- c(3,7,9,1,2)
+ 
+# Make the default Pie Plot
+pie(Prop, labels = c("Cemento","Hierro","Ceramicos","Menbrana","Cal"))
+
+```
+   
+* Entregado 26/10/23
+* Entregado 27/10/23 
+* Sin entregar por falta de comb. 
+* Entregado 1/11/23
+
+
+Column {.tabset}
+-------------------------------------
+   
+### Combustible
+
+```{r}
+
+# library
+library(ggplot2)
+ 
+# create a dataset
+specie <- c(rep("productivas" , 3) , rep("limpieza" , 3) , rep("improductivas" , 3) , rep("planeamiento/instrucción" , 3) )
+condition <- rep(c("normal" , "extra" , "accidente") , 4)
+value <- abs(rnorm(12 , 0 , 15))
+data <- data.frame(specie,condition,value)
+ 
+# Stacked
+ggplot(data, aes(fill=condition, y=value, x=specie)) + 
+    geom_bar(position="stack", stat="identity")
+
+
+```   
+ 
+### Materiales
+    
+```{r}
+knitr::kable(mtcars)
+```
+
+
+# Productividad
+
+
+Row
+-----------------------------------------------------------------------
+
+### Dias Laborables
+
+```{r}
+labor <- 22
+valueBox(labor, icon = "fa-pencil")
+```
+
+### Horas Hommbre Mensual (hs/persona)
+
+```{r}
+hshm <- 169
+valueBox(hshm, icon = "fa-comments")
+```
+
+### Tiempo Perdido
+
+```{r}
+dias_p <- 73
+valueBox(dias_p, 
+         icon = "fa-trash",
+         color = ifelse(dias_p > 10, "warning", "primary"))
+```
+
+
+### Accidentes
+
+```{r}
+acc <- 5
+valueBox(acc, 
+         icon = "fa-ambulance",
+         color = ifelse(acc > 3, "warning", "primary"))
+```
+
+# Avance y Desembolso
+
+Row 
+-----------------------------------------------------------------------
+
+### % Avance Semanal Requerido 
+
+```{r}
+rate <- 81
+gauge(rate, min = 0, max = 100, symbol = '%', gaugeSectors(
+  success = c(80, 100), warning = c(40, 79), danger = c(0, 39)
+))
+```
+
+### Inversión Recibido 
+
+```{r}
+rating <- 32
+gauge(rating, min = 0, max = 50, gaugeSectors(
+  success = c(41, 50), warning = c(21, 40), danger = c(0, 20)
+))
+```
+
+### Desembolsos
+
+
+```{r}
+cancellations <- 7
+gauge(cancellations, min = 0, max = 10, gaugeSectors(
+  success = c(0, 2), warning = c(3, 6), danger = c(7, 10)
+))
+```
+
+
+# Gannt
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Avance
+
+```{r}
+library("plan")
+g <- new("gantt")
+g <- ganttAddTask(g, "Escrituración Terreno") # no times, so a heading
+g <- ganttAddTask(g, "Nivelación", "2023-09-03", "2023-12-05", done=100)
+g <- ganttAddTask(g, "Cierre Perimetral", "2023-09-03", "2023-12-05", done=100)
+g <- ganttAddTask(g, "Acopio Aridos", "2023-09-03", "2023-12-05", done=80)
+g <- ganttAddTask(g, "Fundaciones", "2024-01-03", "2024-04-05")
+g <- ganttAddTask(g, "Plateas", "2024-01-03", "2024-04-05")
+g <- ganttAddTask(g, "Encofrado Columnas", "2024-01-03", "2024-04-05")
+g <- ganttAddTask(g, "Recepción 2do Pago") # no times, so a heading
+g <- ganttAddTask(g, "Hierros", "2023-09-03", "2024-02-01", done=20)
+g <- ganttAddTask(g, "Estribos", "2023-09-03", "2024-08-01", done=30)
+g <- ganttAddTask(g, "Lipieza Terreno", "2023-10-01", "2024-09-01")
+g <- ganttAddTask(g, "Llenado Mate", "2024-05-01", "2024-06-01")
+g <- ganttAddTask(g, "Fraguado", "2024-03-01", "2024-09-01")
+g <- ganttAddTask(g, "Retiro Basura", "2024-09-01", "2024-10-15")
+font <- ifelse(is.na(g[["start"]]), 2, 1)
+plot(g, ylabel=list(font=font),
+     event.time="2024-01-01", event.label="Report Date")
+par(lend="square") # default is round
+legend("topright", pch=22, pt.cex=2, pt.bg=gray(c(0.3, 0.9)),
+       border="black", xpd=NA,
+       legend=c("Completado", "Por realizar"), title="Fin Estructura", bg="white")
+
+
+
+```
+
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Burn Down
+
+
+```{r}
+library(plan)
+
+filename <- "burn.txt"
+b <- read.burndown(filename)
+
+plot(b)
+```
+
+---------------------------
+
+### Interpretación
+
+Los gráficos **Burndown** se utilizan para mostrar una serie temporal del progreso hacia los objetivos de un
+proyecto. El formato es sencillo. El eje x representa el tiempo, que va desde el inicio del proyecto hasta
+la fecha límite para su finalización. El eje y representa el esfuerzo restante que se requiere para realizar el
+trabajo. A medida que se lleva a cabo el trabajo, el gráfico proporciona un resumen continuo del progreso
+hacia la fecha límite. Si el trabajo avanza sin problemas de acuerdo con el cronograma, el gráfico toma la
+forma de un triángulo, y el esfuerzo restante cae desde su valor inicial a cero en la fecha límite.
+A modo de orientación, se dibuja una línea de trazos para indicar esta situación ideal. Si el trabajo se realiza
+más rápido de lo esperado, los datos estarán debajo de esta línea gris. Sin embargo, si el proyecto se está
+retrasando, la línea de datos estará por encima de la línea ideal. Por lo tanto, un vistazo al gráfico indica si
+se puede cumplir con el plazo. En la mayoría de los casos, el trabajo se divide en subtareas y el esfuerzo
+restante en cada tarea se muestra con un color diferente en el gráfico. Esto es útil para identificar tareas que
+pueden necesitar más atención.
+A continuación, se traza un gráfico de trabajo pendiente de muestra; reemplace la llamada data() con una
+llamada read.burndown(), para crear su propio gráfico
+
+
