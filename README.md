@@ -9,13 +9,13 @@ Entregas Finales EO
 * Flor Paez
 
  ## Grupo 2
- Diego Caceres <dacaceres@hotmail.es> **Aprobado>**
- Sergio Zalazar
+ * Diego Caceres <dacaceres@hotmail.es> **Aprobado>**
+ * Sergio Zalazar
  
  ## Grupo 3
  Facundo Mole <facundomole@hotmail.com> **Aprobado**
  Octavio Moyano <octaviomoyano36@gmail.com> **Aprobado**
  
  ## Grupo 4
- Tomas Pedro <tomaspedro38@gmail.com> **Aprobado** 
- Sebastian VArgas
+ * Tomas Pedro <tomaspedro38@gmail.com> **Aprobado** 
+ * Sebastian VArgas
