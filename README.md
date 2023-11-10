@@ -5,7 +5,7 @@ Entregas Finales EO
 ## Grupo 1
 
 * Viginia Roldan
-* Eva Mino  - <evamino26@gmail.com> **Aprobado**
+* Eva Mino  - <evamino26@gmail.com> **Aprobado**  <https://evamino26.github.io/Grupo1/#control-general>
 * Flor Paez
 
  ## Grupo 2
