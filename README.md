@@ -1,8 +1,15 @@
-# Esp_Obras_2023
+# Esp_Obras_2025
 Entregas Finales EO
 
 
-## Grupo 1
+
+
+
+<hr>
+
+# Grupos Anteriores 
+
+## Grupo 1 Trabajo Destacado
 
 * Viginia Roldan
 * Eva Mino  - <evamino26@gmail.com> **Aprobado**  <https://evamino26.github.io/Grupo1/#control-general>
