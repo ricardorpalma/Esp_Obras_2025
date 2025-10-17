@@ -1,0 +1,24 @@
+```{r}
+library(leaflet)
+leaflet() %>%
+  addTiles() %>%
+  
+points <- c(lng=-68.571515, lat=-33.028546, popup="Inicio Obra Km 0 - Diciembre 3 2020",lng=-68.609367, lat=-33.047973, popup="Estacion de Transferencia Barcala - Diciembre 3 2020")
+
+addMarkers(lng=-68.609367, lat=-33.047973, popup="Estacion de Transferencia Barcala - Diciembre 3 2020")
+
+
+
+addMarkers(lng=-68.588338, lat=-33.041786, popup="Ensanche Lamadrid - Febrero 12 2021")
+
+
+addMarkers(lng=-68.623271, lat=-33.048333, popup="Tramo nuevo expropiado - Marzo 1 2021")
+
+
+addMarkers(lng=-68.647733, lat=-33.052362, popup="Empalme ruta 60 - Mayo 15 2021")
+
+addMarkers(lng=-68.854671, lat=-33.003788, popup="Ensanche 4 vias ruta 60 - Mayo 15 2021")
+
+
+
+

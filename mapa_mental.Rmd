@@ -1,0 +1,80 @@
+---
+title: "Mapa Mental"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(ggplot2)
+library(plotly)
+library(plyr)
+# these computing functions are only toy examples
+fortalezas = function(...) return(45)
+debilidades = function(...) return(126)
+amenazas = function(...) return(15)
+oportunidades = function(...) return(6)
+computeSpam = function(...) return(19)
+```
+
+
+
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+
+
+### Fortalezas
+
+```{r}
+
+fortalezas = fortalezas()
+valueBox(fortalezas, icon = "fa-pencil")
+
+
+
+```
+
+### Debilidades
+```{r}
+spam = computeSpam()
+valueBox(
+  spam, icon = "fa-trash",
+  color = ifelse(spam > 10, "warning", "primary")
+)
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+
+### Amenazas
+
+```{r}
+
+amenazas = amenazas()
+valueBox(amenazas, icon = "fa-table", color = "danger")
+
+
+
+```
+
+### Oportunidades
+
+```{r}
+
+oportunidades = oportunidades()
+valueBox(oportunidades, icon = "fa-anchor")
+
+
+
+```
+
+
+
+

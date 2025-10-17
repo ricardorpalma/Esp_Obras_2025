@@ -1,0 +1,243 @@
+---
+title: "Proyecto Variante Palmira - Polo Logístico"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: fill
+---
+
+
+
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(ggplot2)
+library(plotly)
+library(plyr)
+# these computing functions are only toy examples
+computeArticles = function(...) return(45)
+computeComments = function(...) return(126)
+computeSpam = function(...) return(15)
+```
+
+
+KPI {data-icon="fa-sliders"}
+=========
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+
+
+### Curva de Avance vs Inversión
+
+```{r,echo=FALSE}
+library(ggplot2)
+library(plyr)
+dat <- data.frame(cond = rep(c("A", "B"), each=10),
+                  Desembolsos = 0:99 + rnorm(20,sd=25),
+                  Avance_Etapa = 0:99 + rnorm(10,sd=10))
+x="% cumplimiento etapa $"
+y="Avance efectivo por etapa"
+#p <- ggplot(dat, aes(x=xvar, y=yvar)) +        geom_point(shape=1)      # Use hollow circles
+#ggplotly(p)
+
+p <- ggplot(dat, aes(x=Desembolsos, y=Avance_Etapa)) +
+            geom_point(shape=1) +    # Use hollow circles
+            geom_smooth(method=lm)   # Add linear regression line
+ggplotly(p)
+
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Desvio de Costos
+
+```{r}
+
+```
+
+### Desvios de Plazo
+
+```{r}
+
+```
+
+
+Lean MUDA {data-icon="fa-table"}
+=========
+
+Row {data-height=650}
+-------------------------------------
+
+### Distancia promedio caminada por semana (Km) por persona
+
+```{r}
+articles = computeArticles()
+valueBox(articles, icon = "fa-pencil")
+```
+
+### Dias sin accidentes
+
+```{r}
+comments = computeComments()
+valueBox(comments, icon = "fa-comments")
+```
+
+### Entregas Fuera de Tiempo
+
+```{r}
+spam = computeSpam()
+valueBox(
+  spam, icon = "fa-trash",
+  color = ifelse(spam > 10, "warning", "primary")
+)
+```
+
+Row {data-height=650}
+-------------------------------------
+### Hitos
+```{r}
+library(vistime)
+data <- read.csv(text="event,group,start,end,color
+                 Fase 1,Project,2020-09-22,2020-12-15,#c8e6c9
+                 Fase 2,Project,2020-12-23,2021-1-06,#a5d6a7
+                 Fase 3,Project,2021-01-08,2021-02-06,#fb8c00
+                 Fase 4,Project,2021-02-06,2021-05-01,#DD4B39
+                 Munic.,Team 1,2020-09-22,2020-10-02,#DEEBF7
+                 Munic & Min.Obras,Team 1,2020-11-06,2020-12-15,#C6DBEF
+                 Min.Obras,Team 1,2021-01-05,2021-01-23,#9ECAE1
+                 Presupuesto,Team 2,2020-09-22,2020-09-28,#E5F5E0
+                 BID,Team 2,2020-10-28,2020-11-23,#C7E9C0
+                 3-200,Vialidad,2020-12-25,2021-01-06,#1565c0
+                 3-330,Vialidad,2021-01-08,2021-01-15,#1565c0
+                 3-223,Parques,2020-12-28,2020-12-28,#1565c0
+                 3-225,Parques,2020-12-28,2020-12-28,#1565c0
+                 3-226,Transito,2020-12-28,2020-12-28,#1565c0
+                 3-226,San Martín,2021-01-19,2021-01-19,#1565c0
+                 3-330,San Martín,2021-01-19,2021-01-19,#1565c0
+                 1-217.0,Maipú,2021-01-27,2021-01-27,#90caf9
+                 4-399.7,Bodegas,2021-03-13,2021-03-13,#f44336
+                 8-831.0,Coviar,2021-03-17,2021-03-17,#8d6e63
+                 9-984.1,Visita BID,2020-12-22,2020-12-22,#90a4ae
+                 10-984.2,Visita BID,2021-02-25,2021-02-28,#90a4ae
+                 F01.9,Inauguración,2020-12-26,2020-12-26,#e8a735
+                 Z71,Inauguración,2021-02-12,2021-02-12,#e8a735
+                 B95.7,Inauguración,2021-03-15,2021-03-15,#e8a735
+                 T82.7,Inauguración,2021-04-17,2021-04-17,#e8a735")
+
+vistime(data)
+
+```
+
+
+
+
+Pronóstico {data-icon="fa-signal"}
+===================================== 
+
+Row {data-height=650}
+-------------------------------------
+
+### Dias sin Accidentes
+
+```{r}
+gauge(91, min = 0, max = 104, symbol = '%', gaugeSectors(
+  success = c(80, 120), warning = c(40, 79), danger = c(0, 39)
+))
+```
+
+### Productividad
+
+```{r}
+gauge(37.4, min = 0, max = 50, gaugeSectors(
+  success = c(41, 50), warning = c(21, 40), danger = c(0, 20)
+))
+```
+
+### Dias Perdidos
+
+```{r}
+gauge(7, min = 0, max = 10, gaugeSectors(
+  success = c(0, 2), warning = c(3, 6), danger = c(7, 10)
+))
+```
+
+Gant
+---------
+
+```{r}
+library(plotly)
+
+#df <- read.csv("https://cdn.rawgit.com/plotly/datasets/master/GanttChart-updated.csv", 
+#               stringsAsFactors = F)
+
+df <- read.csv("/media/rpalma/OS/AAA_Datos/2020/Posgrado/R-Cran/FlexDashBoard/GanttChart-updated.csv", stringsAsFactors = F)
+
+df$Start  <- as.Date(df$Start, format = "%m/%d/%Y")
+client    <- "Sample Client"
+cols      <- RColorBrewer::brewer.pal(length(unique(df$Resource)), name = "Set3")
+df$color  <- factor(df$Resource, labels = cols)
+
+p <- plot_ly()
+for(i in 1:(nrow(df) - 1)){
+  p <- add_trace(p,
+                 x = c(df$Start[i], df$Start[i] + df$Duration[i]), 
+                 y = c(i, i), 
+                 mode = "lines",
+                 line = list(color = df$color[i], width = 20),
+                 showlegend = F,
+                 hoverinfo = "text",
+                 text = paste("Task: ", df$Task[i], "<br>",
+                              "Duration: ", df$Duration[i], "days<br>",
+                              "Resource: ", df$Resource[i]),
+                 evaluate = T
+  )
+}
+
+p
+
+
+
+
+```
+
+
+
+
+
+Geomática {data-icon="fa-globe"}
+=====
+
+
+### Hitos del proyecto (GANT) georeferenciados para el seguimiento del avance de obra.
+
+```{r}
+library(leaflet)
+library(readr)
+ct <- read_delim("/media/rpalma/OS/AAA_Datos/2020/Posgrado/R-Cran/FlexDashBoard/Puntos.csv", 
+                 ";", quote = "\\\"", escape_double = FALSE, 
+                 trim_ws = TRUE)
+VP_2 <- read_delim("/media/rpalma/OS/AAA_Datos/2020/Posgrado/Especialización de Obras/Flex Dashboard/VP_2.csv", 
+                   ";", escape_double = FALSE, trim_ws = TRUE)
+
+
+leaflet(data = ct) %>% addTiles() %>%
+  addMarkers(~lng, ~lat, popup = ~as.character(type), label = ~as.character(type)) %>%
+       addPolylines(lng=VP_2$lat,lat=VP_2$lng)
+
+        
+
+
+
+```
+
+
+
+
+
+
+
