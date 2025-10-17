@@ -4,6 +4,10 @@ Entregas Finales EO
 
 Modelo de Ejemplo: <https://ricardorpalma.github.io/Esp_Obras_2025/>
 
+## Presentación slide
+
+<https://rpubs.com/ricardorpama/1356648>
+
 
 <hr>
 
