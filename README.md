@@ -9,6 +9,9 @@ Entregas Finales EO
 
 * <https://github.com/julimol-hub/EGO_JULIA_MOLINA_TP_GESTIOMETRIA>
 
+* <https://github.com/acortiz-lang/TABLERO_COMANDO>
+* <>
+
 Modelo de Ejemplo: <https://ricardorpalma.github.io/Esp_Obras_2025/>
 
 ## Presentación slide
