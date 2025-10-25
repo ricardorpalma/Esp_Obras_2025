@@ -4,6 +4,8 @@ Gimena Gonzalez
 <https://github.com/arquitectagimenagonzalez-coder/EGO_GIMENA_GONZALEZ>
 
 
+https://github.com/valentinaabrilborsoi-afk/EGO_Valentina_Borsoi
+
 
 Modelo de Ejemplo: <https://ricardorpalma.github.io/Esp_Obras_2025/>
 
