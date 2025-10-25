@@ -10,8 +10,9 @@ Valentina <https://github.com/valentinaabrilborsoi-afk/EGO_Valentina_Borsoi>
 
 * Ana <https://github.com/acortiz-lang/TABLERO_COMANDO>
 * Julieta <https://github.com/saganiasjulieta-max/ESP_18102025>
+* Monica <https://github.com/monicapereyra/EGOC_MONICA_PEREYRA/blob/main/README.md>
 
-Modelo de Ejemplo: <https://ricardorpalma.github.io/Esp_Obras_2025/>
+Modelo de Ejemplo: <https://monicapereyra.github.io/EGOC_MONICA_PEREYRA/>
 
 ## Presentación slide
 
