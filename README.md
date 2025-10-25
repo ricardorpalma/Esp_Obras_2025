@@ -15,7 +15,9 @@ Modelo de Ejemplo: <https://ricardorpalma.github.io/Esp_Obras_2025/>
 
 <https://rpubs.com/ricardorpama/1356648>
 
+* https://github.com/ManuelSimo/EGOC_MANUEL_SIMO
 
+* 
 <hr>
 
 # Grupos Anteriores 
