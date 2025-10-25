@@ -1,11 +1,13 @@
 # Esp_Obras_2025
 Entregas Finales EO
-Gimena Gonzalez
+* Gimena Gonzalez
 <https://github.com/arquitectagimenagonzalez-coder/EGO_GIMENA_GONZALEZ>
 
 
-https://github.com/valentinaabrilborsoi-afk/EGO_Valentina_Borsoi
+* https://github.com/valentinaabrilborsoi-afk/EGO_Valentina_Borsoi
 
+
+* <https://github.com/julimol-hub/EGO_JULIA_MOLINA_TP_GESTIOMETRIA>
 
 Modelo de Ejemplo: <https://ricardorpalma.github.io/Esp_Obras_2025/>
 
