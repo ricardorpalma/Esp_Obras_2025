@@ -3,14 +3,13 @@ Entregas Finales EO
 * Gimena Gonzalez
 <https://github.com/arquitectagimenagonzalez-coder/EGO_GIMENA_GONZALEZ>
 
+Valentina <https://github.com/valentinaabrilborsoi-afk/EGO_Valentina_Borsoi>
 
-* https://github.com/valentinaabrilborsoi-afk/EGO_Valentina_Borsoi
 
+* Julia <https://github.com/julimol-hub/EGO_JULIA_MOLINA_TP_GESTIOMETRIA>
 
-* <https://github.com/julimol-hub/EGO_JULIA_MOLINA_TP_GESTIOMETRIA>
-
-* <https://github.com/acortiz-lang/TABLERO_COMANDO>
-* <https://github.com/saganiasjulieta-max/ESP_18102025>
+* Ana <https://github.com/acortiz-lang/TABLERO_COMANDO>
+* Julieta <https://github.com/saganiasjulieta-max/ESP_18102025>
 
 Modelo de Ejemplo: <https://ricardorpalma.github.io/Esp_Obras_2025/>
 
