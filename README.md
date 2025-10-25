@@ -17,7 +17,10 @@ Modelo de Ejemplo: <https://ricardorpalma.github.io/Esp_Obras_2025/>
 
 * https://github.com/ManuelSimo/EGOC_MANUEL_SIMO
 
+* https://github.com/mariapazruizest-gif/trabajogestiometr-a
+
 * 
+
 <hr>
 
 # Grupos Anteriores 
