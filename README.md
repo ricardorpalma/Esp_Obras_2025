@@ -14,6 +14,23 @@ Valentina <https://github.com/valentinaabrilborsoi-afk/EGO_Valentina_Borsoi>
 
 Modelo de Ejemplo: <https://monicapereyra.github.io/EGOC_MONICA_PEREYRA/>
 
+<hr>
+Entregas Finales 2025
+
+
+|Alumno	              |Entrega                                              |
+|---------------------|-----------------------------------------------------|
+|Gimena Gonzalez	  |<https://github.com/arquitectagimenagonzalez-coder/EGO_GIMENA_GONZALEZ> |
+|Valentina Borsoi	  |<https://valentinaabrilborsoi-afk.github.io/EGO_Valentina_Borsoi/> |
+|Julia Molina Gatica  |<https://julimol-hub.github.io/EGO_JULIA_MOLINA_TP_GESTIOMETRIA/>|
+|Ana Ortiz	          |<https://acortiz-lang.github.io/TABLERO_COMANDO/> |
+|Julieta Saganias	  |<https://github.com/saganiasjulieta-max/ESP_18102025>|
+|Monica Pereyra	      |<https://github.com/monicapereyra/EGOC_MONICA_PEREYRA/blob/main/README.md>|
+|Jorge Carrizo 	      |<https://jorgecarrizo95-dev.github.io/EGOC_JORGE_CARRIZO/>| 
+
+
+<hr>
+
 ## Presentación slide
 
 <https://rpubs.com/ricardorpama/1356648>
