@@ -11,6 +11,7 @@ Valentina <https://github.com/valentinaabrilborsoi-afk/EGO_Valentina_Borsoi>
 * Ana <https://github.com/acortiz-lang/TABLERO_COMANDO>
 * Julieta <https://github.com/saganiasjulieta-max/ESP_18102025>
 * Monica <https://github.com/monicapereyra/EGOC_MONICA_PEREYRA/blob/main/README.md>
+* Jorge <https://jorgecarrizo95-dev.github.io/EGOC_JORGE_CARRIZO>
 
 Modelo de Ejemplo: <https://monicapereyra.github.io/EGOC_MONICA_PEREYRA/>
 
